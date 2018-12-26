@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nw5-EP-KwK">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Youre-Gone.ttf">
+            <string>YoureGone-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="zzG-dz-n0j">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="nw5-EP-KwK" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8zt-ex-RIq">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="W5Q-XB-V3h" kind="relationship" relationship="rootViewController" id="0LH-iD-opO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NUd-Sf-PB7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-399" y="51"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="ZYV-2k-Te7">
+            <objects>
+                <viewController id="W5Q-XB-V3h" customClass="LoginViewController" customModule="Spending_Control" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ibF-4y-3fq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="c0b-Iw-0oM">
+                                <rect key="frame" x="142" y="247.5" width="91" height="92"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="9ho-iU-IvL">
+                                <rect key="frame" x="177.5" y="482.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spending Control" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SL3-Nw-IAf">
+                                <rect key="frame" x="90" y="359.5" width="195.5" height="23"/>
+                                <fontDescription key="fontDescription" name="YoureGone-Regular" family="You're Gone" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.36078431372549019" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="9ho-iU-IvL" firstAttribute="top" secondItem="SL3-Nw-IAf" secondAttribute="bottom" constant="100" id="8L4-rm-Gr3"/>
+                            <constraint firstItem="SL3-Nw-IAf" firstAttribute="top" secondItem="c0b-Iw-0oM" secondAttribute="bottom" constant="20" id="ALt-1e-4lq"/>
+                            <constraint firstItem="c0b-Iw-0oM" firstAttribute="centerY" secondItem="hZX-Qe-GDh" secondAttribute="centerY" constant="-50" id="cQb-Qw-Dju"/>
+                            <constraint firstItem="9ho-iU-IvL" firstAttribute="centerX" secondItem="c0b-Iw-0oM" secondAttribute="centerX" id="l0e-4c-S0R"/>
+                            <constraint firstItem="SL3-Nw-IAf" firstAttribute="centerX" secondItem="c0b-Iw-0oM" secondAttribute="centerX" id="mJu-Pc-q35"/>
+                            <constraint firstItem="c0b-Iw-0oM" firstAttribute="centerX" secondItem="hZX-Qe-GDh" secondAttribute="centerX" id="qdm-pw-plj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hZX-Qe-GDh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2N2-cD-2Fb"/>
+                    <connections>
+                        <segue destination="5aU-w0-ORv" kind="show" identifier="mainSegue" id="ekV-7j-l6c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lN2-Nn-Lc0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="478" y="51"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="WPR-ZU-D5f">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="5aU-w0-ORv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y2P-SJ-FNn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1149" y="50"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="91" height="92.5"/>
+    </resources>
+</document>
